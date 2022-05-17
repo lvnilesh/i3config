@@ -21,8 +21,9 @@ The Rofi theme used is a modified version of the currently existing Dracula Rofi
 
 <div id="specs" markdown="1">
 
+## Specifications
+
 ```md
-- Specifications:
 
 DISTRO: Ubuntu
 WM: i3wm
