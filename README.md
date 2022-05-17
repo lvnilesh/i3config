@@ -13,6 +13,8 @@ The Rofi theme used is a modified version of the currently existing Dracula Rofi
 
 <div id="screenshots" markdown="1">
 
+## Screenshots
+
 ![Floating windows](https://media.discordapp.net/attachments/635625917623828520/976129128665317486/unknown.png?width=1214&height=682)
 
 ![Tiled windows](https://media.discordapp.net/attachments/635625917623828520/976129129114112040/unknown.png?width=1212&height=682)
