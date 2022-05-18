@@ -66,7 +66,7 @@ bash configure.sh
 
 If you are not using Ubuntu, then you will need to manually install the packages listed in `configure.sh`
 
-### Create a disk image for the dotfiles
+## Create a disk image for the dotfiles
 
 If you wish to create a distribution of Ubuntu with the dotfiles preinstalled for personal or public use, follow the guide below:
 
