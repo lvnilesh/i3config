@@ -64,18 +64,20 @@ cd ~/dotfiles
 bash configure.sh
 ```
 
-If you are not using Ubuntu, then you will need to manually install these packages:
+If you are not using Ubuntu, then you will need to manually install the packages listed in `configure.sh`
 
-- i3wm
-- i3blocks
-- i3status
-- i3bar
-- i3lock
-- picom
-- terminator
-- rofi
+### Create a disk image for the dotfiles
 
-and then move the directories in the `config` folder to `~/.config`.
+If you wish to create a distribution of Ubuntu with the dotfiles preinstalled for personal or public use, follow the guide below:
+
+- Install [Cubic](https://launchpad.net/cubic).
+- Download the latest LTS version of Ubuntu from [their website](https://ubuntu.com).
+- Launch Cubic
+- Install git onto the distribution with `apt install git`
+- Clone this repository with `git clone https://github.com/mrbeebenson/dotfiles`
+- Run this command: `cd ~/dotfiles && bash distro_script.sh`
+
+- You will be required to modify the i3 configuration file in `~/.config/i3/config`, as well as the i3blocks configuration file in `~/.config/i3/i3blocks.conf` so that the directories point to your home directory rather than "mrbeebenson".
 
 </div>
 
