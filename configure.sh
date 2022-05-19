@@ -8,3 +8,4 @@ mv ~/dotfiles/config/terminator ~/.config/
 mv ~/dotfiles/config/rofi ~/.config
 mv ~/dotfiles/bash ~/Documents/
 mv ~/dotfiles/wallpapers ~/Pictures/
+mv ~/dotfiles/.bash_aliases ~
