@@ -5,9 +5,9 @@ sudo pacman -S install i3 i3blocks rofi dmenu scrot imagemagick terminator picom
 
 sudo rm -rf ~/.config/i3 ~/.config/terminator ~/.config/rofi ~/Documents/bash ~/Pictures/wallpapers ~/.bash_aliases
 
-mv ~/dotfiles/config/i3 ~/.config/
-mv ~/dotfiles/config/terminator ~/.config/
-mv ~/dotfiles/config/rofi ~/.config
-mv ~/dotfiles/bash ~/Documents/
-mv ~/dotfiles/wallpapers ~/Pictures/
-mv ~/dotfiles/.bash_aliases ~
+mv ~/i3config/config/i3 ~/.config/
+mv ~/i3config/config/terminator ~/.config/
+mv ~/i3config/config/rofi ~/.config
+mv ~/i3config/bash ~/Documents/
+mv ~/i3config/wallpapers ~/Pictures/
+mv ~/i3config/.bash_aliases ~
