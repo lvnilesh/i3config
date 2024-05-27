@@ -1,4 +1,4 @@
-# MrBeeBenson's i3wm theme.
+# cloudgenius i3wm theme.
 # Theme inspired by the Dracula colour scheme.
 
 set $mod Mod4
@@ -143,7 +143,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Load background
-exec_always feh --bg-scale /home/mrbeebenson/Pictures/wallpapers/skyline.jpg
+exec_always feh --bg-scale /home/cloudgenius/Pictures/wallpapers/skyline.jpg
 
 # Load compositor
 exec_always picom
@@ -206,6 +206,6 @@ client.focused_inactive #2d2d2d #2d2d2d #2d2d2d #2d2d2d
 client.unfocused #2d2d2d #2d2d2d #2d2d2d #2d2d2d
 
 # Extra keybinnds
-bindsym $mod+shift+x exec /home/mrbeebenson/Documents/bash/lock.sh
+bindsym $mod+shift+x exec /home/cloudgenius/Documents/bash/lock.sh
 bindsym $mod+shift+p exec flameshot gui
-bindsym $mod+Shift+e exec /home/mrbeebenson/Documents/bash/power.sh
+bindsym $mod+Shift+e exec /home/cloudgenius/Documents/bash/power.sh
