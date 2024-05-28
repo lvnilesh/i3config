@@ -21,7 +21,7 @@ sudo systemctl start bluetooth
 
 
 sudo su
-mkdir -p /usr/share/fonts/MesloLGS/ &&
+sudo mkdir -p /usr/share/fonts/MesloLGS/ &&
 cd /usr/share/fonts/MesloLGS/ && {
 rm -rf MesloLGS\*.ttf
 wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Regular.ttf"
