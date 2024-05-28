@@ -20,14 +20,14 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
 
-sudo su
+# sudo su
 sudo mkdir -p /usr/share/fonts/MesloLGS/ &&
 cd /usr/share/fonts/MesloLGS/ && {
-rm -rf MesloLGS\*.ttf
-wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Regular.ttf"
-wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Italic.ttf"
-wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Bold.ttf"
-wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Bold Italic.ttf"
+sudo rm -rf MesloLGS\*.ttf
+sudo wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Regular.ttf"
+sudo wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Italic.ttf"
+sudo wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Bold.ttf"
+sudo wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Bold Italic.ttf"
 cd -; }
 
 sudo fc-cache -vf /usr/share/fonts/
