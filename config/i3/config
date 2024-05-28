@@ -1,8 +1,11 @@
 # cloudgenius i3wm theme.
 # Theme inspired by the Dracula colour scheme.
 
-# set $mod Mod4 # Option
-set $mod Mod1 # ALT
+# Option key
+# set $mod Mod4
+
+# ALT key
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
