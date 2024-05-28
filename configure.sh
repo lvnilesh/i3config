@@ -19,6 +19,19 @@ sudo systemctl start gdm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
+
+sudo su
+mkdir -p /usr/share/fonts/MesloLGS/ &&
+cd /usr/share/fonts/MesloLGS/ && {
+rm -rf MesloLGS\*.ttf
+wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Regular.ttf"
+wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Italic.ttf"
+wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Bold.ttf"
+wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Bold Italic.ttf"
+cd -; }
+
+sudo fc-cache -vf /usr/share/fonts/
+
 mv ~/i3config/config/i3 ~/.config/
 mv ~/i3config/config/terminator ~/.config/
 mv ~/i3config/config/rofi ~/.config
