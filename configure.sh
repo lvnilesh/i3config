@@ -38,6 +38,8 @@ mv ~/i3config/config/rofi ~/.config
 mv ~/i3config/bash ~/Documents/
 mv ~/i3config/wallpapers ~/Pictures/
 mv ~/i3config/.bash_aliases ~
+
+rm ~/.wezterm.lua
 ln -s ~/i3config/wezterm.lua ~/.wezterm.lua
 
 git reset --hard
