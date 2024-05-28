@@ -1,4 +1,3 @@
-
 -- https://www.youtube.com/watch?v=uOnL4fEnldA&t=317s
 -- https://github.com/josean-dev/dev-environment-files/blob/main/.wezterm.lua
 
@@ -23,7 +22,7 @@ config.colors = {
 	brights = { "#214969", "#E52E2E", "#44FFB1", "#FFE073", "#A277FF", "#a277ff", "#24EAF7", "#24EAF7" },
 }
 
-config.font = wezterm.font("MesloLGS NF")
+config.font = wezterm.font("Jetbrains Mono 12")
 config.font_size = 14
 
 config.enable_tab_bar = false
