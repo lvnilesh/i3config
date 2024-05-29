@@ -89,3 +89,8 @@ ln -s ~/i3config/config/autostart/xmodmap.desktop  ~/.config/autostart/xmodmap.d
 # tap to click
 sudo rm -rf /etc/X11/xorg.conf.d/90-touchpad.conf
 sudo ln -s ~/i3config/90-touchpad.conf /etc/X11/xorg.conf.d/90-touchpad.conf
+
+
+rm -rf ~/.bashrc
+
+ln -s ~/i3config/.bashrc ~/.bashrc
