@@ -75,3 +75,15 @@ ln -s ~/i3config/wallpapers ~/Pictures/wallpapers
 
 rm -rf ~/.bash_aliases
 ln -s ~/i3config/.bash_aliases ~/.bash_aliases
+
+rm -rf ~/.Xmodmap
+ln -s ~/i3config/.Xmodmap ~/.Xmodmap
+
+rm -rf ~/.xinitrc
+ln -s ~/i3config/.xinitrc ~/.xinitrc
+
+rm -rf ~/.config/autostart/xmodmap.desktop
+mkdir -p ~/.config/autostart
+ln -s ~/i3config/config/autostart/xmodmap.desktop  ~/.config/autostart/xmodmap.desktop
+
+
