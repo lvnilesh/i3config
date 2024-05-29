@@ -2,13 +2,20 @@
 
 sudo pacman -Syu --noconfirm
 
-sudo pacman -S --needed --noconfirm vscode \
+sudo pacman -S --needed --noconfirm \
+    vscode \
+    base \
+    xorg-server \
+    i3-wm \
+    i3status \
     gdm \
     gnome \
     gnome-extra \
     git \
     wget \
     curl \
+    vi \
+    openssh \
     wezterm \
     bluez \
     blueman \
@@ -27,6 +34,7 @@ sudo pacman -S --needed --noconfirm \
     pavucontrol \
     thunar \
     feh \
+    playerctl \
     neofetch -y
 
 sudo systemctl enable sshd
@@ -38,9 +46,7 @@ sudo systemctl start gdm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
-# font
-
-# sudo su
+# MesloLGS Nerd font
 sudo mkdir -p /usr/share/fonts/MesloLGS/ &&
 cd /usr/share/fonts/MesloLGS/ && {
 sudo rm -rf MesloLGS\*.ttf

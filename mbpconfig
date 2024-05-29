@@ -9,12 +9,12 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# set $mod Mod4
-set $mod Mod1
+set $mod Mod4
+# set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -57,15 +57,23 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec wezterm
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+# bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
+# start rofi (a program launcher)
+
+# Start dmenu rofi
+bindsym $mod+d exec i3-dmenu-desktop --dmenu='rofi -dmenu -i -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"' 
+
+# Start rofi
+bindsym $mod+shift+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
 
 # change focus
 bindsym $mod+j focus left
@@ -159,7 +167,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -188,8 +196,39 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
+set $bg-color 	         #282a36
+set $inactive-bg-color   #282a36
+set $text-color          #ffffff
+set $inactive-text-color #ffffff
+set $urgent-bg-color     #282a36
+set $cl-black 		 #000000
+
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        position bottom
+        colors {
+		background $bg-color
+	    	separator #757575
+		#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+                active_workspace   $inactive-bg-color $inactive-bg-color $inactive-text-color
+	}
 }
+
+# Borders
+default_border pixel 3
+default_floating_border pixel 3
+client.focused #bd93f9 #bd93f9 #bd93f9 #bd93f9
+client.focused_inactive #2d2d2d #2d2d2d #2d2d2d #2d2d2d
+client.unfocused #2d2d2d #2d2d2d #2d2d2d #2d2d2d
+
+# Extra keybinnds
+bindsym $mod+shift+x exec /home/cloudgenius/Documents/bash/lock
+bindsym $mod+shift+p exec flameshot gui
+bindsym $mod+Shift+e exec /home/cloudgenius/Documents/bash/power
