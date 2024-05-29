@@ -8,6 +8,7 @@ sudo pacman -S --needed --noconfirm \
     xorg-server \
     i3-wm \
     i3status \
+    i3-gaps \
     gdm \
     gnome \
     gnome-extra \
@@ -95,6 +96,15 @@ ln -s ~/i3config/config/autostart/xmodmap.desktop  ~/.config/autostart/xmodmap.d
 # tap to click
 sudo rm -rf /etc/X11/xorg.conf.d/90-touchpad.conf
 sudo ln -s ~/i3config/90-touchpad.conf /etc/X11/xorg.conf.d/90-touchpad.conf
+
+# natural mouse
+sudo rm -rf /etc/X11/xorg.conf.d/30-pointer.conf
+sudo ln -s ~/i3config/30-pointer.conf /etc/X11/xorg.conf.d/30-pointer.conf
+
+# mbpfan 
+sudo rm -rf /etc/mbpfan.conf
+sudo ln -s ~/i3config/mbpfan.conf /etc/mbpfan.conf
+sudo systemctl restart mbpfan.service
 
 # hidpi
 # tap to click
