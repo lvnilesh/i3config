@@ -14,6 +14,21 @@ sudo pacman -S --needed --noconfirm vscode \
     blueman \
     firefox -y
 
+sudo pacman -S --needed --noconfirm \
+    i3 \
+    i3blocks \
+    rofi \
+    dmenu \
+    scrot \
+    imagemagick \
+    terminator \
+    picom \
+    lxappearance \
+    pavucontrol \
+    thunar \
+    feh \
+    neofetch -y
+
 sudo systemctl enable sshd
 sudo systemctl start sshd
 
@@ -42,3 +57,11 @@ ln -s /home/cloudgenius/i3config/wezterm.lua ~/.wezterm.lua
 
 rm -rf ~/.config/i3/config
 ln -s /home/cloudgenius/i3config/mbpconfig ~/.config/i3/config
+ln -s /home/cloudgenius/i3config/config/i3blocks.conf ~/.config/i3/i3blocks.conf
+
+
+ln -s ~/i3config/config/terminator ~/.config/terminator
+ln -s  ~/i3config/config/rofi ~/.config/rofi
+ln -s  ~/i3config/bash ~/Documents/bash
+ln -s  ~/i3config/wallpapers ~/Pictures/wallpapers
+ln -s  ~/i3config/.bash_aliases ~/.bash_aliases
