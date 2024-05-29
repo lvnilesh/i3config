@@ -1,0 +1,44 @@
+#!/bin/bash
+
+sudo pacman -Syu --noconfirm
+
+sudo pacman -S --needed --noconfirm vscode \
+    gdm \
+    gnome \
+    gnome-extra \
+    git \
+    wget \
+    curl \
+    wezterm \
+    bluez \
+    blueman \
+    firefox -y
+
+sudo systemctl enable sshd
+sudo systemctl start sshd
+
+sudo systemctl enable gdm
+sudo systemctl start gdm
+
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+
+# font
+
+# sudo su
+sudo mkdir -p /usr/share/fonts/MesloLGS/ &&
+cd /usr/share/fonts/MesloLGS/ && {
+sudo rm -rf MesloLGS\*.ttf
+sudo wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Regular.ttf"
+sudo wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Italic.ttf"
+sudo wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Bold.ttf"
+sudo wget "https://cloudgeniuscode.s3-us-west-2.amazonaws.com/MesloLGS NF Bold Italic.ttf"
+cd -; }
+
+sudo fc-cache -vf /usr/share/fonts/
+
+rm -rf ~/.wezterm.lua
+ln -s /home/cloudgenius/i3config/wezterm.lua ~/.wezterm.lua
+
+rm -rf ~/.config/i3/config
+ln -s /home/cloudgenius/i3config/mbpconfig ~/.config/i3/config
