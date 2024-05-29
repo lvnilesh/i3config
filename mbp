@@ -57,11 +57,21 @@ ln -s /home/cloudgenius/i3config/wezterm.lua ~/.wezterm.lua
 
 rm -rf ~/.config/i3/config
 ln -s /home/cloudgenius/i3config/mbpconfig ~/.config/i3/config
+
+rm -rf ~/.config/i3/i3blocks.conf
 ln -s /home/cloudgenius/i3config/config/i3blocks.conf ~/.config/i3/i3blocks.conf
 
-
+rm -rf ~/.config/terminator
 ln -s ~/i3config/config/terminator ~/.config/terminator
-ln -s  ~/i3config/config/rofi ~/.config/rofi
-ln -s  ~/i3config/bash ~/Documents/bash
-ln -s  ~/i3config/wallpapers ~/Pictures/wallpapers
-ln -s  ~/i3config/.bash_aliases ~/.bash_aliases
+
+rm -rf ~/.config/rofi
+ln -s ~/i3config/config/rofi ~/.config/rofi
+
+rm -rf ~/Documents/bash
+ln -s ~/i3config/bash ~/Documents/bash
+
+rm -rf ~/Pictures/wallpapers
+ln -s ~/i3config/wallpapers ~/Pictures/wallpapers
+
+rm -rf ~/.bash_aliases
+ln -s ~/i3config/.bash_aliases ~/.bash_aliases
