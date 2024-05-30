@@ -10,12 +10,11 @@ sudo pacman -S tlp
 sudo systemctl enable tlp.service
 sudo systemctl start tlp.service
 
-sudo pacman -S cpupower
-
-# Mine is MJLQ2 so set this
-
-# /etc/default/cpupower
-max_freq="2.2GHz"
-
 sudo tlp-stat
 
+sudo pacman -S ethtool smartmontools cpupower
+
+cat /proc/cpuinfo
+
+# /etc/default/cpupower
+max_freq="2.5GHz"
