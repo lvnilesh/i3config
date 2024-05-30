@@ -220,7 +220,7 @@ set $cl-black 		 #000000
 # finds out, if available)
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        position bottom
+        position top
         colors {
 		background $bg-color
 	    	separator #757575
@@ -233,8 +233,8 @@ bar {
 }
 
 # Borders
-default_border pixel 3
-default_floating_border pixel 3
+default_border pixel 1
+default_floating_border pixel 1
 client.focused #bd93f9 #bd93f9 #bd93f9 #bd93f9
 client.focused_inactive #2d2d2d #2d2d2d #2d2d2d #2d2d2d
 client.unfocused #2d2d2d #2d2d2d #2d2d2d #2d2d2d

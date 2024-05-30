@@ -67,7 +67,7 @@ rm -rf ~/.config/i3/config
 ln -s /home/cloudgenius/i3config/mbpconfig ~/.config/i3/config
 
 rm -rf ~/.config/i3/i3blocks.conf
-ln -s /home/cloudgenius/i3config/config/i3blocks.conf ~/.config/i3/i3blocks.conf
+ln -s /home/cloudgenius/i3config/config/i3/i3blocks.conf ~/.config/i3/i3blocks.conf
 
 rm -rf ~/.config/terminator
 ln -s ~/i3config/config/terminator ~/.config/terminator
@@ -115,3 +115,8 @@ ln -s ~/i3config/.Xresources ~/.Xresources
 # bashrc
 rm -rf ~/.bashrc
 ln -s ~/i3config/.bashrc ~/.bashrc
+
+# i3status
+# rm -rf ~/.i3status.conf
+# ln -s ~/i3config/i3status-unused.conf ~/.i3status.conf
+
