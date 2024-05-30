@@ -22,6 +22,7 @@ sudo pacman -S --needed --noconfirm \
     blueman \
     brightnessctl \
     acpi \
+    python-pip \
     firefox -y
 
 sudo pacman -S --needed --noconfirm \
