@@ -20,6 +20,7 @@ sudo pacman -S --needed --noconfirm \
     wezterm \
     bluez \
     blueman \
+    brightnessctl \
     firefox -y
 
 sudo pacman -S --needed --noconfirm \
